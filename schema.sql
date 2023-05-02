@@ -7,3 +7,10 @@ CREATE TABLE animals(
     neutered boolean,
     weight_kg numeric
 );
+
+-- * Project 2
+ALTER TABLE
+    animals
+ADD
+    species varchar(100);
+

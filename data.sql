@@ -133,4 +133,4 @@ INSERT INTO
         weight_kg
     )
 VALUES
-    ('Ditto', '2022-05-14', 4, TRUE, 17);
+    ('Ditto', '2022-05-14', 4, TRUE, 17); 

@@ -232,3 +232,48 @@ ORDER BY
     frequency DESC
 LIMIT
     1;
+
+-- * Project 4
+SELECT
+    animals.name,
+    vets.name,
+    visited
+FROM
+    animals,
+    visits,
+    vets
+WHERE
+    animals.id = visits.animal_id
+    AND vets.id = visits.vet_id
+    AND vets.name = 'William Tatcher'
+ORDER BY
+    visited DESC
+LIMIT
+    1;
+
+SELECT
+    animals.name animals,
+    vets.name vets,
+    COUNT(animals)
+FROM
+    animals,
+    visits,
+    vets
+WHERE
+    animals.id = visits.animal_id
+    AND vets.id = visits.vet_id
+    AND vets.name = 'Stephanie Mendez'
+GROUP BY
+    animals.name,
+    vets.name,
+    visits.visited
+ORDER BY
+    visited DESC;
+
+SELECT
+    species.name spec_names,
+    vets.name
+FROM
+    species,
+    specializations FULL
+    JOIN vets ON vets.id = specializations.vet_id;
